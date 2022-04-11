@@ -23,6 +23,8 @@ kotlin {
                 implementation(project(":common"))
                 implementation(compose.desktop.currentOs)
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+                implementation("io.coil-kt:coil:0.11.0")
+                implementation ("io.coil-kt:coil-gif:0.11.0")
             }
         }
         val jvmTest by getting
@@ -34,7 +36,7 @@ compose.desktop {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "jvm"
+            packageName = "Weather"
             packageVersion = "1.0.0"
         }
     }
